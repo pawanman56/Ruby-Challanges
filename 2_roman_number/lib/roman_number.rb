@@ -1,4 +1,4 @@
-class RomanNumbers
+class RomanNumber
 
   def initialize(number)
     @number = number
