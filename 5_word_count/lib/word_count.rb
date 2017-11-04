@@ -11,7 +11,6 @@ class WordCount
     words = @sentence.downcase.split(" ")
     result = words.each_with_object(Hash.new(0)) {
       |words, counts| counts[words] += 1
-      return true
     }
   end
 
