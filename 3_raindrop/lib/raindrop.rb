@@ -5,6 +5,9 @@ class Raindrop
   end
 
   def raindrop
+    return false if (@n.is_a? Numeric) != true
+    return false if @n < 0
+
     if @n%3 == 0 && @n%5 == 0 && @n%7 == 0
       return "PlingPlongPlang"
     elsif @n%3 == 0 && @n%5 == 0
@@ -20,7 +23,7 @@ class Raindrop
     elsif @n%7 == 0
       return "Plong"
     else
-      return "No rain"
+      return @n
     end
   end
 
