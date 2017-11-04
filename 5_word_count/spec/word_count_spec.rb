@@ -14,11 +14,11 @@ describe WordCount do
     end
 
     it 'should return true on a word' do
-      expect(WordCount.new('this').counter).to eq(true)
+      expect(WordCount.new('this').counter).to eq("this"=>1)
     end
 
     it 'should return true on a sentence' do
-      expect(WordCount.new('This is joy, this is summer. Keep alive.').counter).to eq(true)
+      expect(WordCount.new('This is joy, this is summer. Keep alive.').counter).to eq("this"=>2, "is"=>2, "joy,"=>1, "summer."=>1, "keep"=>1, "alive."=>1)
     end
   end
 end
